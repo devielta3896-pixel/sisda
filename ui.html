@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitBot - Chatbot Fitness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            height: 92vh;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 300px;
+            background: rgba(15, 23, 42, 0.9);
+            padding: 30px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .menu-item {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 16px;
+            border-radius: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: rgba(56, 189, 248, 0.25);
+            transform: translateX(5px);
+        }
+
+        .menu-item h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .menu-item p {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .bottom-box {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .bottom-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .bottom-box p {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* CHAT AREA */
+
+        .chat-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f8fafc;
+        }
+
+        .topbar {
+            padding: 25px 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        .topbar h2 {
+            color: #0f172a;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #22c55e;
+            font-weight: 500;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #22c55e;
+        }
+
+        .chat-box {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .message {
+            max-width: 75%;
+            padding: 18px 20px;
+            border-radius: 22px;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .bot {
+            background: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .user {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .input-area {
+            padding: 25px;
+            background: white;
+            display: flex;
+            gap: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 18px;
+            border-radius: 18px;
+            border: none;
+            background: #f1f5f9;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .send-btn {
+            width: 60px;
+            border: none;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+
+            .container {
+                width: 100%;
+                height: 100vh;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <div>
+
+                <div class="logo">
+                    <div class="logo-icon">F</div>
+                    <h1>FitBot</h1>
+                </div>
+
+                <div class="menu">
+
+                    <div class="menu-item">
+                        <h3>🏋️ Beginner Workout</h3>
+                        <p>Latihan dasar untuk pemula</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3>🔥 Fat Burning</h3>
+                        <p>Rekomendasi latihan pembakaran lemak</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3>💪 Muscle Training</h3>
+                        <p>Latihan pembentukan otot</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <h3>🥗 Healthy Tips</h3>
+                        <p>Saran pola hidup sehat</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bottom-box">
+                <h3>Knowledge-Based Fitness Chatbot</h3>
+                <p>
+                    Sistem chatbot fitness berbasis rule-based untuk memberikan rekomendasi latihan dasar sesuai
+                    kebutuhan pengguna.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- CHAT -->
+
+        <div class="chat-section">
+
+            <div class="topbar">
+                <h2>Fitness Assistant Chatbot</h2>
+
+                <div class="status">
+                    <div class="dot"></div>
+                    Online
+                </div>
+            </div>
+
+            <div class="chat-box" id="chatBox">
+
+                <div class="message bot">
+                    Halo 👋 Saya FitBot. Saya dapat membantu memberikan rekomendasi latihan dasar sesuai kebutuhan
+                    fitness kamu.
+                </div>
+
+                <div class="message user">
+                    Saya ingin latihan untuk pemula.
+                </div>
+
+                <div class="message bot">
+                    Baik 👍 Untuk pemula, saya merekomendasikan:
+                    <br><br>
+                    • Push Up - 3 x 10
+                    <br>
+                    • Squat - 3 x 15
+                    <br>
+                    • Plank - 30 detik
+                    <br>
+                    • Jumping Jack - 2 menit
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input type="text" placeholder="Ketik pertanyaan fitness kamu...">
+
+                <button class="send-btn">➤</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const sendBtn = document.getElementById('sendBtn');
+        const userInput = document.getElementById('userInput');
+        const chatBox = document.getElementById('chatBox');
+
+        // SEND MESSAGE
+
+        sendBtn.addEventListener('click', sendMessage);
+
+        // ENTER KEY
+
+        userInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        async function sendMessage() {
+
+            const message = userInput.value.trim();
+
+            if (message === '') return;
+
+            // USER MESSAGE
+
+            const userMessage = document.createElement('div');
+
+            userMessage.classList.add('message', 'user');
+
+            userMessage.innerText = message;
+
+            chatBox.appendChild(userMessage);
+
+            // AUTO SCROLL
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // CLEAR INPUT
+
+            userInput.value = '';
+
+            try {
+
+                // SEND TO BACKEND API
+
+                const response = await fetch('http://localhost:3000/chat', {
+
+                    method: 'POST',
+
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+
+                    body: JSON.stringify({
+                        message: message
+                    })
+
+                });
+
+                const data = await response.json();
+
+                // BOT RESPONSE
+
+                const botMessage = document.createElement('div');
+
+                botMessage.classList.add('message', 'bot');
+
+                botMessage.innerText = data.reply;
+
+                chatBox.appendChild(botMessage);
+
+                // AUTO SCROLL
+
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+            } catch (error) {
+
+                const errorMessage = document.createElement('div');
+
+                errorMessage.classList.add('message', 'bot');
+
+                errorMessage.innerText = 'Server error. Backend belum connect 😭';
+
+                chatBox.appendChild(errorMessage);
+
+            }
+
+        }
+
+    </script>`
+
+</body>
+
+</html>
