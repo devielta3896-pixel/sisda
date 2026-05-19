@@ -1,0 +1,460 @@
+{
+  "pengetahuan": [
+    {
+      "id": 1,
+      "kategori": "dada",
+      "keywords": ["dada", "chest", "pectoral", "pecs"],
+      "latihan": [
+        {
+          "nama": "Push Up",
+          "deskripsi": "Latihan dasar bodyweight untuk melatih otot dada, bahu, dan trisep. Posisi tubuh lurus, tangan selebar bahu.",
+          "target_otot": "Pectoralis Major, Tricep, Anterior Deltoid",
+          "set": 3,
+          "repetisi": "12-15",
+          "level": "Pemula",
+          "tips": "Jaga tubuh tetap lurus seperti papan, jangan biarkan pinggang turun."
+        },
+        {
+          "nama": "Bench Press",
+          "deskripsi": "Latihan utama dada menggunakan barbell di atas bangku. Salah satu latihan terkuat untuk membangun massa dada.",
+          "target_otot": "Pectoralis Major, Tricep, Anterior Deltoid",
+          "set": 4,
+          "repetisi": "8-10",
+          "level": "Menengah",
+          "tips": "Tarik napas saat menurunkan bar, hembuskan saat mendorong. Gunakan spotter untuk keamanan."
+        },
+        {
+          "nama": "Dumbbell Fly",
+          "deskripsi": "Latihan isolasi dada dengan gerakan membuka dan menutup lengan seperti kepakan sayap. Baik untuk melebarkan dada.",
+          "target_otot": "Pectoralis Major, Anterior Deltoid",
+          "set": 3,
+          "repetisi": "12",
+          "level": "Menengah",
+          "tips": "Jaga siku sedikit ditekuk sepanjang gerakan untuk melindungi sendi."
+        },
+        {
+          "nama": "Incline Bench Press",
+          "deskripsi": "Bench press dengan bangku miring 30-45 derajat, fokus pada bagian atas dada.",
+          "target_otot": "Upper Pectoralis, Anterior Deltoid",
+          "set": 3,
+          "repetisi": "10",
+          "level": "Menengah",
+          "tips": "Sudut bangku 30-45 derajat adalah ideal untuk upper chest."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "kategori": "punggung",
+      "keywords": ["punggung", "back", "belakang", "lat", "rhomboid"],
+      "latihan": [
+        {
+          "nama": "Pull Up",
+          "deskripsi": "Latihan bodyweight terbaik untuk punggung. Gantung pada palang dan tarik tubuh ke atas hingga dagu melewati palang.",
+          "target_otot": "Latissimus Dorsi, Rhomboids, Bicep",
+          "set": 3,
+          "repetisi": "5-10",
+          "level": "Menengah",
+          "tips": "Fokus menarik siku ke bawah, bukan hanya menarik tangan."
+        },
+        {
+          "nama": "Bent Over Row",
+          "deskripsi": "Latihan baris dengan tubuh membungkuk 45 derajat, menarik barbell/dumbbell ke arah perut.",
+          "target_otot": "Latissimus Dorsi, Rhomboids, Trapezius",
+          "set": 4,
+          "repetisi": "10-12",
+          "level": "Menengah",
+          "tips": "Jaga punggung tetap lurus dan netral, hindari membungkuk berlebihan."
+        },
+        {
+          "nama": "Lat Pulldown",
+          "deskripsi": "Latihan mesin/kabel yang menarik bar dari atas ke bawah, mensimulasikan gerakan pull up.",
+          "target_otot": "Latissimus Dorsi, Bicep",
+          "set": 3,
+          "repetisi": "12",
+          "level": "Pemula",
+          "tips": "Baik untuk pemula yang belum bisa pull up. Tarik ke dada bagian atas."
+        },
+        {
+          "nama": "Deadlift",
+          "deskripsi": "Latihan compound terkuat yang melatih seluruh punggung, paha, dan tubuh secara keseluruhan.",
+          "target_otot": "Erector Spinae, Latissimus Dorsi, Hamstring, Glutes",
+          "set": 4,
+          "repetisi": "5-6",
+          "level": "Lanjutan",
+          "tips": "Teknik sangat penting! Punggung selalu lurus, angkat dengan kaki bukan punggung."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "kategori": "kaki",
+      "keywords": ["kaki", "leg", "paha", "betis", "squat", "quadricep", "hamstring"],
+      "latihan": [
+        {
+          "nama": "Squat",
+          "deskripsi": "Raja dari semua latihan kaki. Turunkan tubuh seperti duduk di kursi hingga paha sejajar lantai.",
+          "target_otot": "Quadriceps, Hamstrings, Glutes, Core",
+          "set": 4,
+          "repetisi": "10-12",
+          "level": "Pemula",
+          "tips": "Lutut mengikuti arah jari kaki, tumit tidak boleh terangkat, punggung tegak."
+        },
+        {
+          "nama": "Lunges",
+          "deskripsi": "Langkah maju besar ke depan sambil menurunkan lutut belakang ke lantai. Bagus untuk keseimbangan.",
+          "target_otot": "Quadriceps, Hamstrings, Glutes",
+          "set": 3,
+          "repetisi": "12 per kaki",
+          "level": "Pemula",
+          "tips": "Lutut depan tidak boleh melewati jari kaki, jaga punggung tegak."
+        },
+        {
+          "nama": "Leg Press",
+          "deskripsi": "Latihan mesin untuk mendorong beban dengan kedua kaki, aman untuk pemula.",
+          "target_otot": "Quadriceps, Hamstrings, Glutes",
+          "set": 4,
+          "repetisi": "12-15",
+          "level": "Pemula",
+          "tips": "Jangan kunci lutut saat ekstensi penuh, selalu sedikit ditekuk."
+        },
+        {
+          "nama": "Calf Raise",
+          "deskripsi": "Berdiri di ujung kaki, naik dan turun untuk melatih otot betis.",
+          "target_otot": "Gastrocnemius, Soleus",
+          "set": 3,
+          "repetisi": "20-25",
+          "level": "Pemula",
+          "tips": "Lakukan perlahan dan rasakan kontraksi di betis. Bisa dilakukan di anak tangga."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "kategori": "bahu",
+      "keywords": ["bahu", "shoulder", "deltoid", "pundak"],
+      "latihan": [
+        {
+          "nama": "Overhead Press",
+          "deskripsi": "Mendorong barbell atau dumbbell lurus ke atas dari posisi bahu. Latihan utama untuk bahu.",
+          "target_otot": "Deltoid (Anterior & Medial), Trapezius, Tricep",
+          "set": 4,
+          "repetisi": "8-10",
+          "level": "Menengah",
+          "tips": "Jaga core tetap kuat, hindari melengkungkan punggung bawah saat mendorong."
+        },
+        {
+          "nama": "Lateral Raise",
+          "deskripsi": "Angkat dumbbell ke samping hingga sejajar bahu. Fokus pada bagian tengah bahu.",
+          "target_otot": "Medial Deltoid",
+          "set": 3,
+          "repetisi": "15",
+          "level": "Pemula",
+          "tips": "Gunakan beban ringan dulu. Jangan ayunkan tubuh, gerak murni dari bahu."
+        },
+        {
+          "nama": "Front Raise",
+          "deskripsi": "Angkat dumbbell ke depan hingga sejajar bahu untuk melatih bagian depan bahu.",
+          "target_otot": "Anterior Deltoid",
+          "set": 3,
+          "repetisi": "12",
+          "level": "Pemula",
+          "tips": "Bisa dilakukan bergantian kiri-kanan untuk kontrol lebih baik."
+        },
+        {
+          "nama": "Arnold Press",
+          "deskripsi": "Variasi overhead press dengan gerakan rotasi, melatih seluruh kepala deltoid sekaligus.",
+          "target_otot": "Deltoid (semua kepala), Trapezius",
+          "set": 3,
+          "repetisi": "10-12",
+          "level": "Menengah",
+          "tips": "Mulai dengan dumbbell di depan wajah, rotasi keluar sambil mendorong ke atas."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "kategori": "lengan",
+      "keywords": ["lengan", "tangan", "arm", "bicep", "tricep", "bisep", "trisep"],
+      "latihan": [
+        {
+          "nama": "Bicep Curl",
+          "deskripsi": "Latihan klasik untuk bisep menggunakan dumbbell atau barbell. Tekuk siku sambil menahan beban.",
+          "target_otot": "Biceps Brachii, Brachialis",
+          "set": 3,
+          "repetisi": "12-15",
+          "level": "Pemula",
+          "tips": "Jaga siku tetap di sisi tubuh, jangan ayunkan bahu untuk membantu."
+        },
+        {
+          "nama": "Hammer Curl",
+          "deskripsi": "Curl dengan pegangan netral (telapak menghadap ke dalam) seperti memegang palu.",
+          "target_otot": "Biceps, Brachialis, Brachioradialis",
+          "set": 3,
+          "repetisi": "12",
+          "level": "Pemula",
+          "tips": "Sangat bagus untuk forearm dan brachialis. Alternatif bicep curl biasa."
+        },
+        {
+          "nama": "Tricep Dips",
+          "deskripsi": "Duduk di tepi bangku, turunkan tubuh dengan siku, lalu dorong kembali ke atas.",
+          "target_otot": "Triceps Brachii",
+          "set": 3,
+          "repetisi": "10-15",
+          "level": "Pemula",
+          "tips": "Bisa dilakukan di bangku atau parallel bar. Semakin jauh kaki, semakin berat."
+        },
+        {
+          "nama": "Skull Crusher",
+          "deskripsi": "Berbaring di bangku, turunkan barbell/EZ bar ke dahi dengan menekuk siku, lalu dorong ke atas.",
+          "target_otot": "Triceps Brachii (semua kepala)",
+          "set": 3,
+          "repetisi": "10-12",
+          "level": "Menengah",
+          "tips": "Jaga siku tetap menghadap langit-langit, hanya siku yang bergerak."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "kategori": "cardio",
+      "keywords": ["cardio", "kardio", "lari", "aerobik", "jantung", "lemak", "fat"],
+      "latihan": [
+        {
+          "nama": "Jogging / Lari",
+          "deskripsi": "Latihan kardio paling dasar. Lari dengan tempo sedang selama 20-30 menit untuk pembakaran lemak optimal.",
+          "target_otot": "Jantung, Paru-paru, Quadriceps, Hamstrings",
+          "set": 1,
+          "repetisi": "20-30 menit",
+          "level": "Pemula",
+          "tips": "Mulai dengan jalan cepat, tingkatkan ke jogging bertahap. Target heart rate 60-70% maksimal."
+        },
+        {
+          "nama": "Jumping Jacks",
+          "deskripsi": "Loncat sambil membuka kaki dan mengangkat tangan ke atas, lalu kembali. Latihan kardio mudah tanpa alat.",
+          "target_otot": "Full Body, Jantung",
+          "set": 3,
+          "repetisi": "30-50",
+          "level": "Pemula",
+          "tips": "Bisa digunakan sebagai pemanasan atau sirkuit kardio ringan."
+        },
+        {
+          "nama": "Burpees",
+          "deskripsi": "Kombinasi squat, push up, dan lompatan. Latihan kardio intensitas tinggi yang membakar banyak kalori.",
+          "target_otot": "Full Body, Jantung",
+          "set": 3,
+          "repetisi": "10",
+          "level": "Menengah",
+          "tips": "Istirahat 60 detik antar set. Burpee adalah salah satu latihan paling efisien."
+        },
+        {
+          "nama": "Skipping / Jump Rope",
+          "deskripsi": "Lompat tali selama 15-20 menit membakar kalori setara jogging 30 menit.",
+          "target_otot": "Betis, Jantung, Koordinasi",
+          "set": 3,
+          "repetisi": "3 menit per set",
+          "level": "Pemula",
+          "tips": "Mulai dengan lompatan lambat, tingkatkan kecepatan seiring kemampuan membaik."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "kategori": "fullbody",
+      "keywords": ["full body", "fullbody", "seluruh tubuh", "total body", "semua otot"],
+      "latihan": [
+        {
+          "nama": "Clean and Press",
+          "deskripsi": "Latihan olimpik yang mengangkat barbell dari lantai langsung ke atas kepala dalam satu gerakan.",
+          "target_otot": "Full Body - Hamstring, Glutes, Back, Shoulders, Core",
+          "set": 4,
+          "repetisi": "5",
+          "level": "Lanjutan",
+          "tips": "Pelajari teknik yang benar dahulu dengan beban ringan. Latihan sangat teknikal."
+        },
+        {
+          "nama": "Kettlebell Swing",
+          "deskripsi": "Ayunkan kettlebell dari antara kaki ke depan atas menggunakan dorongan pinggul.",
+          "target_otot": "Glutes, Hamstrings, Core, Shoulders, Back",
+          "set": 3,
+          "repetisi": "20",
+          "level": "Menengah",
+          "tips": "Gerakan datang dari pinggul, bukan dari lengan. Ini bukan latihan bahu."
+        },
+        {
+          "nama": "Turkish Get Up",
+          "deskripsi": "Bangkit dari posisi berbaring ke berdiri sambil menjaga kettlebell di atas kepala dengan satu tangan.",
+          "target_otot": "Core, Shoulders, Hips, Full Body Stability",
+          "set": 3,
+          "repetisi": "5 per sisi",
+          "level": "Lanjutan",
+          "tips": "Gerakan lambat dan terkontrol. Mata selalu melihat kettlebell."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "kategori": "bulking",
+      "keywords": ["bulking", "bulk", "naik berat", "massa otot", "tambah berat", "besar", "gain"],
+      "penjelasan": "Bulking adalah fase menambah massa otot dengan mengonsumsi kalori lebih dari yang dibakar (surplus kalori). Tujuannya adalah memaksimalkan pertumbuhan otot.",
+      "panduan": [
+        "Konsumsi kalori 300-500 kkal di atas TDEE (Total Daily Energy Expenditure)",
+        "Prioritaskan protein: 1.6-2.2 gram per kg berat badan per hari",
+        "Latihan beban fokus compound movement: Squat, Deadlift, Bench Press, Row",
+        "Tidur 7-9 jam per hari untuk recovery optimal",
+        "Pilih clean bulking (makanan bergizi) atau dirty bulking (semua dimakan)",
+        "Pantau kenaikan berat badan: ideal 0.5-1 kg per bulan",
+        "Tetap lakukan kardio ringan 1-2x seminggu untuk kesehatan jantung"
+      ],
+      "latihan_rekomendasi": [
+        {"nama": "Squat", "set": 5, "repetisi": "5", "catatan": "Beban berat, fokus kekuatan"},
+        {"nama": "Bench Press", "set": 5, "repetisi": "5", "catatan": "Progressive overload setiap minggu"},
+        {"nama": "Deadlift", "set": 4, "repetisi": "5", "catatan": "1x seminggu cukup, beban maksimal"},
+        {"nama": "Overhead Press", "set": 4, "repetisi": "6", "catatan": "Naikkan beban tiap sesi jika bisa"}
+      ]
+    },
+    {
+      "id": 9,
+      "kategori": "cutting",
+      "keywords": ["cutting", "cut", "turun berat", "lemak", "diet", "kurus", "lean", "sixpack", "perut"],
+      "penjelasan": "Cutting adalah fase membakar lemak sambil mempertahankan massa otot yang sudah dibangun. Dilakukan dengan defisit kalori.",
+      "panduan": [
+        "Konsumsi kalori 300-500 kkal di bawah TDEE",
+        "Tingkatkan protein lebih tinggi: 2.0-2.5 gram per kg untuk cegah muscle loss",
+        "Pertahankan latihan beban untuk menjaga otot",
+        "Tambah kardio: 3-5x seminggu, 20-40 menit",
+        "Hindari crash diet drastis - maksimal defisit 500 kkal",
+        "Target penurunan: 0.5-1 kg per minggu adalah aman",
+        "Minum banyak air minimal 3 liter per hari"
+      ],
+      "latihan_rekomendasi": [
+        {"nama": "Jogging / LISS Cardio", "set": 1, "repetisi": "30-45 menit", "catatan": "3-5x per minggu"},
+        {"nama": "Circuit Training", "set": 4, "repetisi": "15-20 reps", "catatan": "Istirahat minimal untuk bakar kalori"},
+        {"nama": "HIIT", "set": 1, "repetisi": "20 menit", "catatan": "Interval 30 detik sprint / 30 detik istirahat"}
+      ]
+    },
+    {
+      "id": 10,
+      "kategori": "pemanasan",
+      "keywords": ["pemanasan", "warm up", "warmup", "stretching", "peregangan", "sebelum latihan"],
+      "penjelasan": "Pemanasan adalah tahap wajib sebelum latihan untuk mempersiapkan otot dan sendi, mencegah cedera, dan meningkatkan performa.",
+      "latihan": [
+        {
+          "nama": "Arm Circle",
+          "deskripsi": "Putar lengan ke depan dan belakang untuk memanaskan sendi bahu.",
+          "target_otot": "Bahu, Rotator Cuff",
+          "set": 1,
+          "repetisi": "15 putaran tiap arah",
+          "level": "Pemula",
+          "tips": "Mulai dari lingkaran kecil, perbesar secara bertahap."
+        },
+        {
+          "nama": "Leg Swing",
+          "deskripsi": "Ayunkan kaki ke depan-belakang dan samping untuk memanaskan sendi pinggul dan paha.",
+          "target_otot": "Hip Flexor, Hamstring, Glutes",
+          "set": 1,
+          "repetisi": "20 per kaki",
+          "level": "Pemula",
+          "tips": "Pegang dinding atau tiang untuk keseimbangan."
+        },
+        {
+          "nama": "High Knees",
+          "deskripsi": "Angkat lutut setinggi mungkin sambil berlari di tempat untuk memanaskan tubuh bagian bawah.",
+          "target_otot": "Hip Flexor, Core, Quadriceps",
+          "set": 1,
+          "repetisi": "30 detik",
+          "level": "Pemula",
+          "tips": "Seimbangkan dengan ayunan lengan yang berlawanan dengan kaki."
+        },
+        {
+          "nama": "World's Greatest Stretch",
+          "deskripsi": "Gerakan kompleks yang meregangkan pinggul, dada, dan rotasi tulang belakang sekaligus.",
+          "target_otot": "Full Body Mobility",
+          "set": 1,
+          "repetisi": "5 per sisi",
+          "level": "Pemula",
+          "tips": "Lakukan perlahan dan rasakan regangan di setiap posisi, tahan 2-3 detik."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "kategori": "jadwal",
+      "keywords": ["jadwal", "program", "schedule", "rencana", "seminggu", "plan", "rutinitas"],
+      "penjelasan": "Program latihan yang terstruktur penting untuk pemula agar progres konsisten dan menghindari overtraining.",
+      "program": {
+        "nama": "Program 3 Hari Pemula (Full Body)",
+        "deskripsi": "Cocok untuk pemula yang baru mulai gym, latihan 3x seminggu dengan istirahat di antaranya.",
+        "jadwal": [
+          {
+            "hari": "Senin",
+            "fokus": "Full Body A",
+            "latihan": ["Squat 3x10", "Bench Press 3x10", "Bent Over Row 3x10", "Overhead Press 3x8", "Plank 3x30 detik"]
+          },
+          {
+            "hari": "Rabu",
+            "fokus": "Full Body B",
+            "latihan": ["Deadlift 3x5", "Incline Bench 3x10", "Lat Pulldown 3x10", "Lateral Raise 3x15", "Core Circuit"]
+          },
+          {
+            "hari": "Jumat",
+            "fokus": "Full Body C",
+            "latihan": ["Squat 3x10", "Dumbbell Fly 3x12", "Pull Up 3x5", "Arnold Press 3x10", "Bicep Curl 3x12"]
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "kategori": "pemula",
+      "keywords": ["pemula", "beginner", "baru", "mulai", "pertama", "awal", "newbie"],
+      "penjelasan": "Panduan lengkap untuk seseorang yang baru pertama kali mulai latihan gym.",
+      "tips": [
+        "Mulai dengan beban ringan dan fokus pada teknik yang benar",
+        "Latihan 3x seminggu sudah cukup untuk pemula",
+        "Selalu lakukan pemanasan 10-15 menit sebelum latihan",
+        "Istirahat cukup: otot tumbuh saat istirahat, bukan saat latihan",
+        "Makan protein cukup: telur, dada ayam, tahu, tempe, susu",
+        "Catat progress: berat badan, beban yang digunakan, repetisi",
+        "Jangan bandingkan diri dengan orang lain",
+        "Konsistensi lebih penting dari intensitas"
+      ],
+      "latihan_awal": [
+        {"nama": "Push Up", "set": 3, "repetisi": "10"},
+        {"nama": "Squat", "set": 3, "repetisi": "10"},
+        {"nama": "Plank", "set": 3, "repetisi": "20 detik"},
+        {"nama": "Jumping Jacks", "set": 1, "repetisi": "30"},
+        {"nama": "Lunges", "set": 3, "repetisi": "8 per kaki"}
+      ]
+    },
+    {
+      "id": 13,
+      "kategori": "set_rep",
+      "keywords": ["set", "repetisi", "rep", "reps", "berapa", "jumlah", "volume"],
+      "penjelasan": "Panduan jumlah set dan repetisi sesuai tujuan latihan.",
+      "panduan": [
+        {
+          "tujuan": "Kekuatan (Strength)",
+          "set": "4-6",
+          "repetisi": "1-5",
+          "istirahat": "3-5 menit",
+          "catatan": "Beban sangat berat (85-100% 1RM)"
+        },
+        {
+          "tujuan": "Hipertrofi/Massa Otot",
+          "set": "3-5",
+          "repetisi": "6-12",
+          "istirahat": "60-90 detik",
+          "catatan": "Beban sedang-berat (65-85% 1RM)"
+        },
+        {
+          "tujuan": "Endurance/Daya Tahan",
+          "set": "2-3",
+          "repetisi": "15-20+",
+          "istirahat": "30-60 detik",
+          "catatan": "Beban ringan (40-60% 1RM)"
+        }
+      ]
+    }
+  ]
+}

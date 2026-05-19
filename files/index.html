@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitBot — Asisten Fitness AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SIDEBAR KIRI
+       Berisi riwayat percakapan dan tombol reset
+  ============================================================ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">FitBot</span>
+      </div>
+      <button class="new-chat-btn" id="newChatBtn" title="Chat Baru">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="sidebar-section-title">RIWAYAT</div>
+    <div class="chat-history" id="chatHistory">
+      <div class="history-empty">Belum ada percakapan</div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-info">
+        <span class="info-icon">🎓</span>
+        <div>
+          <div class="info-title">Sistem Cerdas</div>
+          <div class="info-sub">Rule-Based Chatbot</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       TOGGLE SIDEBAR (Mobile)
+  ============================================================ -->
+  <button class="sidebar-toggle" id="sidebarToggle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+
+  <!-- ============================================================
+       MAIN CONTENT AREA
+  ============================================================ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- HALAMAN AWAL (sebelum ada percakapan) -->
+    <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-badge">💪 Rule-Based Fitness AI</div>
+      <h1 class="welcome-title">
+        Apa latihan fitness yang<br/>
+        <span class="title-highlight">ingin kamu pelajari</span><br/>
+        hari ini?
+      </h1>
+      <p class="welcome-subtitle">
+        Tanyakan tentang latihan dada, punggung, kaki, bahu, lengan, cardio,<br/>
+        program bulking, cutting, dan panduan gym untuk pemula.
+      </p>
+
+      <!-- Kartu saran pertanyaan -->
+      <div class="suggestion-grid">
+        <button class="suggestion-card" onclick="sendSuggestion('Latihan dada apa yang cocok untuk pemula?')">
+          <span class="card-icon">🏋️</span>
+          <span class="card-text">Latihan dada untuk pemula</span>
+        </button>
+        <button class="suggestion-card" onclick="sendSuggestion('Jelaskan program bulking yang efektif')">
+          <span class="card-icon">📈</span>
+          <span class="card-text">Program bulking efektif</span>
+        </button>
+        <button class="suggestion-card" onclick="sendSuggestion('Bagaimana cara cutting yang benar?')">
+          <span class="card-icon">🔥</span>
+          <span class="card-text">Cara cutting yang benar</span>
+        </button>
+        <button class="suggestion-card" onclick="sendSuggestion('Berikan jadwal gym untuk pemula seminggu')">
+          <span class="card-icon">📅</span>
+          <span class="card-text">Jadwal gym untuk pemula</span>
+        </button>
+        <button class="suggestion-card" onclick="sendSuggestion('Latihan kaki dan paha apa saja?')">
+          <span class="card-icon">🦵</span>
+          <span class="card-text">Latihan kaki dan paha</span>
+        </button>
+        <button class="suggestion-card" onclick="sendSuggestion('Berapa set dan repetisi yang ideal?')">
+          <span class="card-icon">🔢</span>
+          <span class="card-text">Panduan set & repetisi</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- AREA CHAT (muncul setelah ada pesan) -->
+    <div class="chat-area" id="chatArea">
+      <div class="chat-messages" id="chatMessages"></div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       INPUT AREA - Fixed di bawah
+  ============================================================ -->
+  <div class="input-wrapper" id="inputWrapper">
+    <div class="input-container">
+      <div class="input-box">
+        <textarea
+          id="userInput"
+          class="chat-input"
+          placeholder="Tanyakan seputar fitness & gym..."
+          rows="1"
+          onkeydown="handleKeyDown(event)"
+          oninput="autoResize(this)"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <p class="input-disclaimer">
+        FitBot memberikan informasi fitness dasar. Selalu konsultasikan program latihanmu dengan pelatih profesional.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       DIAGRAM ALUR SISTEM (Modal)
+  ============================================================ -->
+  <div class="flow-modal" id="flowModal">
+    <div class="flow-modal-content">
+      <button class="flow-close" onclick="closeFlowModal()">✕</button>
+      <h3>Alur Sistem Rule-Based Chatbot</h3>
+      <div class="flow-diagram">
+        <div class="flow-step">
+          <div class="step-icon">👤</div>
+          <div class="step-label">User Input</div>
+          <div class="step-desc">Pengguna mengirimkan pesan/pertanyaan</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          <div class="step-icon">🔤</div>
+          <div class="step-label">Normalisasi</div>
+          <div class="step-desc">Teks diubah ke lowercase & dibersihkan</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          <div class="step-icon">⚖️</div>
+          <div class="step-label">Rule Matching</div>
+          <div class="step-desc">IF keyword ditemukan THEN cocokkan kategori</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          <div class="step-icon">📚</div>
+          <div class="step-label">Knowledge Base</div>
+          <div class="step-desc">Ambil data dari basis pengetahuan JSON</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          <div class="step-icon">💬</div>
+          <div class="step-label">Response</div>
+          <div class="step-desc">Tampilkan jawaban terformat ke pengguna</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tombol flow diagram -->
+  <button class="flow-btn" onclick="openFlowModal()" title="Lihat Alur Sistem">
+    🔄
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
